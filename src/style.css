@@ -1,7 +1,8 @@
 :root {
   --main-font: "Courier Prime", monospace;
 }
-.fiish-website {
+
+.container {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -9,9 +10,12 @@
   align-items: center;
 }
 
+.fiish-website {
+  max-width: 700px;
+}
+
 body {
   background-color: #dfd3c3;
-  max-width: 700px;
 }
 
 .sushi-image {
@@ -44,12 +48,13 @@ h2 {
   margin: auto;
 }
 
-#food-menu,
-#drink-menu {
+#foodMenuBtn,
+#drinkMenuBtn {
   height: 30px;
   width: 150px;
   font-size: 15px;
   margin: 5px;
+  margin-bottom: 15px;
   text-align: center;
   font-family: var(--main-font);
   border: 1px solid black;
@@ -57,17 +62,65 @@ h2 {
   color: white;
 }
 
+#foodMenuBtn,
+#drinkMenuBtn:hover {
+  cursor: pointer;
+}
+
+.menu-items {
+  line-height: 1.5;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#reservation-name,
+#reservation-email {
+  font-family: var(--main-font);
+}
+
 #submit-btn {
   margin: 20px;
   height: 30px;
   width: 80px;
   font-size: 15px;
+  font-family: var(--main-font);
   border: 1px solid #000000;
   border-radius: 5px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: hsla(0, 0%, 0%, 0.211);
   transition: all 200ms ease-in-out;
 }
 
 #submit-btn:hover {
   cursor: pointer;
+}
+
+.num-guests {
+  margin-bottom: 20px;
+}
+
+#numbers {
+  width: 40px;
+  height: 20px;
+  text-align: center;
+}
+
+footer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.fiish-link a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.496);
 }
