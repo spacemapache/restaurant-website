@@ -32,7 +32,11 @@
             Aquaculture Stewardship Council (ASC) certifications and have earned
             a Best Aquaculture Practices (BAP) rating, which measure
             traceability, environmental impact, and pen densities, among other
-            variables. Our seasonal menu will focus only on premium line-caught,
+            variables.
+          </p>
+         
+          <p>
+            Our seasonal menu will focus only on premium line-caught,
             ethically-sourced fish from local docks and sustainable aquaculture
             farms that we treat and dry age in-house. Once we receive our fresh
             catch, we process the fish and hang them in our on-site dry aging
@@ -44,75 +48,76 @@
             Fiish is a celebration of the coast and spirit of California that we
             are so passionate about.
           </p>
+          <small class="fiish-link">
+            <a href="https://www.fiish.co/about/">
+              Fiish Website
+            </a>
+          </small>
           <h2>Menu</h2>
           <div class="menu">
-            <button id="food-menu">Food</button>
-            <button id="drink-menu">Drink</button>
-            <br />
-            <div class="food-items">
-              BIG FIISH
-              <br />
-              Edamame, seaweed salad cucumber salad, aged tuna sashimi, 2 salmon
-              with lemon zest, 2 albacore garlic ponzu pickled onion, 2
-              yellowtail jalapeño negi, 2 stripped bass ponzu togarashi negi, 1
-              tuna jalapeño garlic aioli sesame, 1 snapper yuzu koshu wasabi
-              negi, 4 pieces salmon cut roll, 4 pieces spicy tuna roll
-              <br />
-              $62
-              <br />
-              LITTLE FIISH
-              <br />
-              Edamame, seaweed salad, 2 salmon with lemon zest, 1 albacore
-              garlic ponzu pickled onion, 2 yellowtail jalapeño Negi, 1 stripped
-              bass ponzu togarashi Negi, 1 tuna smoked soy wasabi sashimi, 4
-              pieces salmon cut roll, 4 pieces spicy Tuna roll
-              <br />
-              $48
-            </div>
-
-            <div class="drink-items">
-              HANKY PANKY Junmai namachozo sake, strawberry, yuzu, sparkling
-              rose, bitters $17
-              <br />
-              BLIND DATE Shochu, shushing, lime rose water, soda water $17
-              <br />
-              BINGO BANGO Nigori sake, butterfly pea, yuzu, lemon, jasmine water
-              $17
-              <br />
-              WASABI MARGARITA Agave wine, cucumber, junta sake, lime, wasabi,
-              togarashi $16
-              <br />
-
-              SHEEBA SHEEBA Agave wine, blanc vermouth, ponzu, lime, prickly
-              pear $16
-              <br />
-              ROASTED BARLEY OLD FASHIONED Barrel rested shook, roasted barley,
-              hickory- smoked cherry bitters $16
-            </div>
-          </div>
-          <h2>Reservations</h2>
-          <div class="reservation-form">
-            <div class="calendar">
-              <label for="datepicker">Select a date</label>
-              <input type="date" id="datepicker" />
-            </div>
-            <div class="reservation-name">
-              <form>
-                <input type="text" placeholder="Name" id="reservation-name" />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  id="reservation-email"
-                />
-              </form>
-            </div>
+            <button id="foodMenuBtn" onclick="foodBtn(event)">Food</button>
+            <button id="drinkMenuBtn" onclick="drinkBtn(event)">Drink</button>
+            
+          <div class="menu-items" id="menuItems">
+            <ul>
+              <li>BIG FIISH</li>
+              <li>
+                Edamame, seaweed salad cucumber salad, aged tuna sashimi, 2
+                salmon with lemon zest, 2 albacore garlic ponzu pickled onion, 2
+                yellowtail jalapeño negi, 2 stripped bass ponzu togarashi negi,
+                1 tuna jalapeño garlic aioli sesame, 1 snapper yuzu koshu wasabi
+                negi, 4 pieces salmon cut roll, 4 pieces spicy tuna roll
+              </li>
+              <li>LITTLE FIISH</li>
+              <li>
+                Edamame, seaweed salad, 2 salmon with lemon zest, 1 albacore
+                garlic ponzu pickled onion, 2 yellowtail jalapeño Negi, 1
+                stripped bass ponzu togarashi Negi, 1 tuna smoked soy wasabi
+                sashimi, 4 pieces salmon cut roll, 4 pieces spicy Tuna roll
+              </li>
+            </ul>
           </div>
 
-          <button id="submit-btn">Submit</button>
+
         </div>
+        <h2>Reservations</h2>
+        <div class="reservation-form">
+          <div class="calendar">
+            <label for="datepicker">Select a date</label>
+            <input type="date" id="datepicker" />
+          </div>
+          <div class="num-guests">
+            <label for="numbers"> Number of guests: </label>
+            <select id="numbers" name="numbers">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+          <div class="reservation-name">
+            <form>
+              <input type="text" placeholder="Name" id="reservation-name" />
+              <input
+                type="email"
+                placeholder="Email Address"
+                id="reservation-email"
+              />
+            </form>
+          </div>
+        </div>
+
+        <button onclick="submitBtn()" id="submit-btn">Submit</button>
       </div>
+    </div>
     <footer>
-      Coded by <a href="/">Isabelle Ang</a>
+      Coded by
+      <a href="https://github.com/spacemapache/restaurant-website"
+        >Isabelle Ang</a
+      >
     </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
